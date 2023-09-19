@@ -1,0 +1,13 @@
+:root {
+    --transparent-blue: rgba(115, 178, 242, 0.8);
+    --transparent-green: rgba(93, 234, 68, 0.8);
+    --light-blue: rgb(54, 114, 174);
+    --dim-blue: rgb(48, 101, 153);
+    --light-green: rgb(62, 174, 54);
+    --dim-green: rgb(43, 137, 44);
+    --light-red: rgb(174, 54, 54);
+    --dim-red: rgb(144, 44, 44);
+    --dark-red: rgb(78, 0, 0);
+    --dark-blue: rgb(0, 0, 65);
+    --light-gray: rgb(225, 225, 225);
+}

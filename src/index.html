@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>Calorie Calculator</title>
+</head>
+<body>
+    <div class="body-background"></div>
+    <header>
+        <div class="container header-container">
+            <h2>Calorie calculator</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="container main-container">
+            <div class="calorie-calculator-menu">
+                <div class="btn-wrapper">
+                    <button class="btn btn-menu" id="btn-menu-products">Products</button>
+                </div>
+                <div class="btn-wrapper" id="btn-menu-consumption-chart">
+                    <button class="btn btn-menu">Consumption chart</button>
+                </div>
+                <div class="date-input-wrapper">
+                    <input type="date" class="input-date" name="" id="date">
+                </div>
+            </div>
+            <div class="calorie-calculator-container">
+                <div class="list-products-wrapper" id="list-products-wrapper">
+                    <div class="btn-add-product-wrapper">
+                        <button class="btn btn-add-product" id="btn-add-product">+</button>
+                    </div>
+                    <table class="list-products" id="list-products"></table>
+                    <div id="btn-delete-all-products" class="btn btn-delete-all-products">Delete all products</div>
+                </div>
+
+                <div class="consumption-chart-wrapper" id="consumption-chart-wrapper">
+                    <div class="info-chart-wrapper">
+                        <div class="info-chart" id="info-chart">
+                            <div class="info-chart__elem">
+                                <span>Calories per month: </span><span id="calories-month">0</span><span> kcal</span>
+                            </div>
+                            <div class="info-chart__elem">
+                                <span>Calories for today: </span><span id="calories-day">0</span><span> kcal</span>
+                            </div>
+                            <div class="limit-wrapper">
+                                <label for="limit">Limit</label>
+                                <input type="text" placeholder="Enter the limit" id="limit">
+                                <button class="btn btn-blue" id="btn-set-limit">Set limit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Calorie intake for the last month</h3>
+                        <div class="container scale-and-chart">
+                            <div class="scale" id="scale">
+                                <div class="scale__elem">4500</div>
+                                <div class="scale__elem">4000</div>
+                                <div class="scale__elem">3500</div>
+                                <div class="scale__elem">3000</div>
+                                <div class="scale__elem">2500</div>
+                                <div class="scale__elem">2000</div>
+                                <div class="scale__elem">1500</div>
+                                <div class="scale__elem">1000</div>
+                                <div class="scale__elem">500</div>
+                                <div class="scale__elem">0</div>
+                            </div>
+                            <div class="chart-container">
+                                <div class="limit-chart-wrapper">
+                                    <div class="limit-chart" id="limit-chart"></div>
+                                </div>
+                                <div class="chart" id="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__item">
+                    Calorie calculator
+                </div>
+                <div class="footer__item">
+                    Detkov Nikita
+                </div>
+                <div class="footer__item">
+                    2023
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <template id="template-table-header">
+        <td class="td-name">
+            <div class="container">
+                <span>Name</span>
+                <div class="bnt-sort-container">
+                    <button class="btn-sort btn-blue" onclick="showSortList('name', [-1, 1])">&and;</button>
+                    <button class="btn-sort btn-blue" onclick="showSortList('name', [1, -1])">&or;</button>
+                </div>
+            </div>
+        </td>
+        <td class="td-calories">
+            <div class="container">
+                <span>Kcal in 100 grams</span>
+                <div class="bnt-sort-container">
+                    <button class="btn-sort btn-blue" onclick="showSortList('calories', [-1, 1])">&and;</button>
+                    <button class="btn-sort btn-blue" onclick="showSortList('calories', [1, -1])">&or;</button>
+                </div>
+            </div>
+        </td>
+        <td class="td-weight">
+            <div class="container">
+                <span>Weight in grams</span>
+                <div class="bnt-sort-container">
+                    <button class="btn-sort btn-blue" onclick="showSortList('weight', [-1, 1])">&and;</button>
+                    <button class="btn-sort btn-blue" onclick="showSortList('weight', [1, -1])">&or;</button>
+                </div>
+            </div>
+        </td>
+        <td class="td-date">
+            <div class="container">
+                <span>Date</span>
+                <div class="bnt-sort-container">
+                    <button class="btn-sort btn-blue" onclick="showSortList('date', [-1, 1])">&and;</button>
+                    <button class="btn-sort btn-blue" onclick="showSortList('date', [1, -1])">&or;</button>
+                </div>
+            </div>
+        </td>
+        <td class="td-delete"></td>
+    </template>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

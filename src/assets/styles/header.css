@@ -1,0 +1,16 @@
+header {
+    flex-grow: 0;
+}
+
+.header-container {
+    background-color: var(--transparent-blue);
+    font-size: 18px;
+    padding: 15px 40px;
+    width: max-content;
+    border-radius: 30px;
+}
+
+header h2 {
+    font-weight: 600;
+    color: var(--dark-red);
+}

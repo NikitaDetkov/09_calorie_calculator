@@ -1,0 +1,17 @@
+footer {
+    flex-grow: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: var(--transparent-blue);
+    color: var(--dark-blue);
+}

@@ -1,0 +1,346 @@
+/* Список продуктов */
+
+.calorie-calculator-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-menu {
+    background-color: var(--light-green);
+    border: 2px solid var(--light-green);
+    color: white;
+}
+
+.btn-menu:hover {
+    border-color: var(--dim-green);
+}
+
+.btn-menu:active {
+    background-color: var(--dim-green);
+    border-color: var(--dim-green);
+}
+
+.input-date {
+    outline: none;
+    border: 2px solid white;
+    font-family: 'Montserrat-font';
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.calorie-calculator-container {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--transparent-blue);
+    height: 100%;
+}
+
+.btn-add-product {
+    background-color: var(--light-blue);
+    padding: 3px 20px;
+    border: 2px solid var(--light-blue);
+    font-size: 24px;
+    color: white;
+}
+
+.btn-add-product:hover {
+    border-color: var(--dim-blue);
+}
+
+.btn-add-product:active {
+    background-color: var(--dim-blue);
+    border-color: var(--dim-blue);
+}
+
+.list-products-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.list-products-wrapper.hide {
+    display: none;
+}
+
+.list-products {
+    align-items: start;
+    text-align: left;
+    width: 100%;
+    border-spacing: 0 10px;
+}
+
+.table-header {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.list-products input {
+    outline: none;
+    font-family: 'Montserrat-font';
+    background-color: rgb(207, 207, 207);
+    width: 90%;
+    font-size: 16px;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.td-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bnt-sort-container {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-sort {
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.td-name {
+    width: 22.5%;
+}
+
+.td-calories {
+    width: 22.5%;
+}
+
+.td-weight {
+    width: 22.5%;
+}
+
+.td-date {
+    width: 22.5%;
+}
+
+.td-delete {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.btn-delete {
+    background-color: var(--light-red);
+    padding: 3px 14px;
+    border: 2px solid var(--light-red);
+    color: white;
+}
+
+.btn-delete:hover {
+    border-color: var(--dim-red);
+}
+
+.btn-delete:active {
+    background-color: var(--dim-red);
+    border-color: var(--dim-red);
+}
+
+.btn-delete-all-products {
+    background-color: var(--light-red);
+    border: 2px solid var(--light-red);
+    color: white;
+
+    margin-top: 10px;
+}
+
+.btn-delete-all-products:hover {
+    border-color: var(--dim-red);
+}
+
+.btn-delete-all-products:active {
+    border-color: var(--dim-red);
+    background-color: var(--dim-red);
+}
+
+
+/* График */
+
+.consumption-chart-wrapper {
+    display: none;
+}
+
+.consumption-chart-wrapper.show {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.chart-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chart-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: var(--light-gray);
+    padding: 5px;
+    padding-bottom: 10px;
+    border-radius: 0 3px 3px 0;
+    gap: 2px;
+}
+
+.chart__elem {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart__elem-info {
+    margin-top: 90px;
+    flex: 0;
+    font-size: 14px;
+}
+
+.chart__elem-info-text {
+    text-align: right;
+    transform-origin: 0px 0px;
+    height: 0;
+    max-width: 20px;
+    white-space: nowrap;
+    transform: rotateZ(-90deg);
+}
+
+.chart__elem-line {
+    flex: 1;
+    border: 1px solid rgb(199, 199, 199);
+    display: flex;
+    position: relative;
+    align-items: end;
+    overflow: hidden;
+}
+
+.chart__elem-line-filld {
+    position: absolute;
+    width: 100%;
+    background-color: var(--transparent-blue);
+}
+
+.info-chart-wrapper {
+    width: 40%;
+}
+
+.info-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.limit-chart-wrapper {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: calc(100% - 105px);
+    overflow: hidden;
+    padding-bottom: 105px;
+}
+
+.limit-chart {
+    position: absolute;
+    width: calc(100% - 10px);
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--transparent-green);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-blue {
+    background-color: var(--light-blue);
+    border: 2px solid var(--light-blue);
+    color: white;
+}
+
+.btn-blue:hover {
+    border-color: var(--dim-blue);
+}
+
+.btn-blue:active {
+    border-color: var(--dim-blue);
+    background-color: var(--dim-blue);
+}
+
+.limit-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.consumption-chart-wrapper input {
+    outline: none;
+    font-family: 'Montserrat-font';
+    width: 300px;
+    background-color: var(--light-gray);
+    font-size: 16px;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.info-chart__elem span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.consumption-chart-wrapper label, h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.scale-and-chart {
+    height: 100%;
+    width: 100%;
+}
+
+.scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 5px 100px 5px;
+    width: max-content;
+
+    background-color: var(--light-gray);
+    border-radius: 3px 0 0 3px;
+}
+
+.scale__elem {
+    flex: 1;
+    height: 24px;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    color: black;
+    text-align: right;
+    display: flex;
+    align-items: end;
+}
+
+td .container {
+    align-items: center;
+    gap: 15px;
+}
